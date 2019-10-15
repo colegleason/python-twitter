@@ -780,7 +780,7 @@ class Api(object):
           A sequence of Status instances, one for each message up to count
         """
         url = '%s/statuses/user_timeline.json' % (self.base_url)
-        parameters = {}
+        parameters = {'include_ext_alt_text': True}
 
         if user_id:
             parameters['user_id'] = enf_type('user_id', int, user_id)
